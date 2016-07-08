@@ -11,9 +11,16 @@ while True:
     input_string = raw_input("Please enter your calculation: ")
     elements = input_string.split(" ")
     
-    operand, num1, num2 = elements
+    operand = elements[0]
+    num1 = elements[1]
+    
+    #if operand != "cube" or operand != "square":
+    #if operand not in ["cube","square"]:
+    if len(elements)> 2:
+        num2 = elements [2]
+        num2 = int(num2)
+
     num1 = int(num1)
-    num2 = int(num2)
 
     if operand == '+':
         add_return = add(num1,num2)
